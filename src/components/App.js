@@ -14,7 +14,8 @@ class App extends React.Component {
         videosBackup: [],
         selectedVideo: null,
         details: false,
-        relatedVideos: []
+        relatedVideos: [],
+        videosWached : 0
     }
     handleSubmit = async (textFromSearchBar) => {
         const response = await youtube.get('/search', {
@@ -41,16 +42,15 @@ class App extends React.Component {
         this.setState({selectedVideo: video})
         this.setState({videos: videoList})
         this.handleRelatedVideos(video);
-        console.log("llego hasta aca y este es el video ", video )
     }
     handleVideoDetails = () => {
         this.setState({details: !this.state.details})
     }
     handleRelatedVideos = async (selectedVideo) => {
-        console.log(this.selectedVideo);
-        const relatedVideos = await youtube.get('/search', {
+        console.log(selectedVideo.id.videoId);
+        const relatedVideos = await youtube.get('/search?', {
             params: {
-                relatedVideosId: selectedVideo.id.videoId,
+                relatedToVideoId: selectedVideo.id.videoId,
                 maxResults: 3,
             }
         })
@@ -58,10 +58,17 @@ class App extends React.Component {
         this.setState({
             relatedVideos: relatedVideos.data.items
         })
-        console.log("videos relacionados",relatedVideos);
 
     }
-
+    /*
+    handleVideoCounter = () => {
+        console.log("antes",this.state.videosWached);
+        this.setState({
+            videosWached: this.state.videosWached + 1
+        })
+        console.log("despues",this.state.videosWached);
+    }
+    */
     render() {
         return (
           
@@ -75,7 +82,7 @@ class App extends React.Component {
                     <div className="videos">
                         <div className="video-repro">
                             {this.state.selectedVideo ? (
-                            <VideoDetail video={this.state.selectedVideo}  details ={this.state.details}/>
+                            <VideoDetail video={this.state.selectedVideo}  details ={this.state.details} />
                              ) : (  
                                 <div>
                                     <h1>Search any video...</h1>

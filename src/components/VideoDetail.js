@@ -1,7 +1,7 @@
 import React from "react";
 import '../style/videodetail.css';
 
-const VideoDetail = ({ video, details}) => {
+const VideoDetail = ({ video, details, handleVideoCounter}) => {
 
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
   /*
@@ -9,15 +9,17 @@ const VideoDetail = ({ video, details}) => {
   console.log(typeof video);
   console.log(details);
   */
+
   return (
     <>
         { !details ? (
         <>
         {/*<p>{video.snippet.description}</p>*/}
         <div className="video">
-          <iframe src={videoSrc} allowFullScreen title="Video player" className="video-player" />
-        </div>
+          <iframe src={videoSrc} allowFullScreen title="Video player" className="video-player" onClick={ () => handleVideoCounter} />
 
+        </div>
+        
         <h2 className="title">{video.snippet.title}</h2>
         </>
         ) : (
