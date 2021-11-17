@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Roboto+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comfortaa', cursive;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+#root {
+  display: flex;
+  align-self: center;
+  margin: 0px 200px;
+}
+
+/*parent class - all big contaniers*/
+.parent {
+  height: 100vh;
+  width: 110%;
+  padding: 0.5em;
+  
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  
+}
+/*logo container*/
+.header {
+
+  height: 15vh;
+  width: 20vh;
+  align-items: center;
+
+}
+
+.header img {
+  margin: auto;
+  margin-top: 3em;
+}
+
+.details-not-search {
+  height: 8vh;
+  width: 80%;
+  margin: 0.5em;
+  
+}
+
+/*video containers*/
+.videos {
+  /*background: blue;*/
+  margin: .5em;
+  height: 60vh;
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+}
+
+/*video details*/
+.details {
+  display: flex;
+  align-content: flex-end;
+}
+
+.details-button {
+  margin: 1em;
+  height: 50px;
+  width: 5em;
+  min-width: 30%;
+  max-width: 20%;
+  align-self: center;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+  line-height: 1.45;
+  outline: none;
+  font-size: 1em;
+  background-color: rgb(233, 233, 233); ;
+
+  -webkit-transition: .18s ease-out;
+  -moz-transition: .18s ease-out;
+  -o-transition: .18s ease-out;
+  transition: .18s ease-out;
+  
+  flex: 1;
+}
+.details-button:hover {
+  box-shadow: 0px 5px 10px rgba(248, 240, 255, 0.541);
+  color: white;
+  background: rgb(151, 151, 151);
+  transform: translateY(-2px);
+}
+
+.details-button:focus {
+  color: #4b515d;
+  border: 2px solid #B8B6B6;
+  box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*responsive
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+    .videos {
+      flex-flow: no-wrap;
+      flex-direction: column;
+    }
+
+    .header img {
+      margin: auto;
+      margin-top: 1em;
+    }
+    /*
+    .video-repro {
+      order:1;
+    }
+    .video-thumbnails {
+      order:2;
+    }
+
+}
+*/
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 1000px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .videos {
+      flex-flow: no-wrap;
+      flex-direction: column;
+    }
+    #root {
+      display: flex;
+      align-self: center;
+      margin: 0px 0px;
+    }
+    .header img {
+      margin: auto;
+      margin-top: 1em;
+    }
+    
+}
+
