@@ -5,6 +5,7 @@ import VideoDetail from './VideoDetail';
 
 
 
+
 const VideoPlayer = ({handleFormSubmit, handleVideoDetails, handleVideoSelect, video, videos, details}) => {
     return (
         <>
