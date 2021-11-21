@@ -1,6 +1,8 @@
 import React from 'react';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
+import '../style/videodetail.css';
+import { Link } from 'react-router-dom';
 
 const MoreDetails= ({handleVideoDetails, handleVideoSelect, video, videos, details}) => {
     return (
@@ -8,19 +10,14 @@ const MoreDetails= ({handleVideoDetails, handleVideoSelect, video, videos, detai
         <div className = "details-not-search"></div>
         <div className="videos">
             <div className="video-repro">
-                {video ? (
                 <VideoDetail video={video}  details ={details} />
-                 ) : (  
-                    <div>
-                        <h1>Search any video...</h1>
-                        <br></br>
-                    </div>
-                )}
-                <div className="details">
                     {videos.length === 0 ? <div></div> :
-                    <button onClick={ () => handleVideoDetails()} className="details-button">Back </button>}
+                    <div>
+                    <Link to="/videoplayer" className="details">
+                    <button onClick={ () => handleVideoDetails()} className="details-button">Back </button>
+                    </Link>
+                    </div>}
 
-                </div>
             </div>
             <VideoList handleVideoSelect={handleVideoSelect} videos={videos}/>
         </div>

@@ -10,14 +10,12 @@ const VideoItem = ({video , handleVideoSelect}) => {
     console.log(video.id.videoId);
     console.log(video.snippet.thumbnails.medium.url);
     */
-
-
     return (
         <div className='item' onClick={ () => handleVideoSelect(video)}>
             { video.snippet.title ? (
                 <div className='short-desc'>{video.snippet.title}</div>
             ) : (
-                <div className='short-desc'>{video.snippet.title}</div>
+                <div className='short-desc'>No title</div>
             )}
             <img className='thumbnail' src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>
         </div>

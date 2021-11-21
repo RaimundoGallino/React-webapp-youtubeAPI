@@ -36,7 +36,7 @@ iframe {
     width: auto;
     flex : 1;
     width: 100%;
-    height: 100%;
+    height: 400px;
 }
 
 h1 {
@@ -45,14 +45,74 @@ h1 {
 }
 
 /*details-button*/
-
+.details-not-search {
+    height: 8vh;
+    width: 80%;
+    margin: 0.5em;
+    
+  }
+  
+  /*video containers*/
+  .videos {
+    /*background: blue;*/
+    margin: .5em;
+    height: 60vh;
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  /*video details*/
+  .details {
+    display: flex;
+    align-content: flex-end;
+    text-decoration: none;
+  }
+  
+  .details-button {
+    margin: 1em;
+    height: 50px;
+    width: 5em;
+    min-width: 30%;
+    max-width: 20%;
+    align-self: center;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+    line-height: 1.45;
+    outline: none;
+    font-size: 1em;
+    background-color: rgb(233, 233, 233);
+    text-decoration: none;
+  
+    -webkit-transition: .18s ease-out;
+    -moz-transition: .18s ease-out;
+    -o-transition: .18s ease-out;
+    transition: .18s ease-out;
+    
+    flex: 1;
+  }
+  .details-button:hover {
+    box-shadow: 0px 5px 10px rgba(248, 240, 255, 0.541);
+    color: white;
+    
+    background: rgb(151, 151, 151);
+    transform: translateY(-2px);
+  }
+  
+  .details-button:focus {
+    color: #4b515d;
+    border: 2px solid #B8B6B6;
+    box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+  }
 
 /*responsive*/
 
 @media only screen and (min-width: 600px)
 and  (max-width: 1200px) {
 
-  .iframe {
+  iframe {
     width: 80%;
     height: 200%;
     flex: 3;
@@ -64,5 +124,34 @@ and  (max-width: 1200px) {
     display: flex;
     
 }
+    .videos {
+        flex-flow: no-wrap;
+        flex-direction: column;
+    }
+
+}
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    iframe {
+        width: 120%;
+        height: 100%;
+        flex: 2;
+    }
+    .title {
+        font-size: 15px;
+    }
+}
+@media only screen and (min-width: 600px)
+and  (max-width: 1400px) {
+
+  .videos {
+    flex-flow: no-wrap;
+    flex-direction: column;
+  }
 
 }

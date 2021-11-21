@@ -8,9 +8,7 @@ export default function SearchBar ({handleFormSubmit}) {
 
     const handleChange = (event) => {
         setTerm(event.target.value)
-        console.log(event.target.value)
     }
-
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -22,7 +20,7 @@ export default function SearchBar ({handleFormSubmit}) {
         <>
         <form onSubmit={handleSubmit} className='search-bar'>
             <input className="search" onChange={handleChange} name='video-search' type="text" placeholder="Search.."/>
-            <button className="search-button">Search </button>
+            <button className="search-button">Search</button>
         </form>
         </>
     )

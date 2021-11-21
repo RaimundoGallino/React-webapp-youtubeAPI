@@ -39,7 +39,7 @@
 .search:focus {
   color: #4b515d;
   border: 2px solid #835dff;
-  box-shadow: inset 1px 10px 10px rgba(224, 223, 223, 0.205), 0px 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 1px 10px 10px rgba(224, 223, 223, 0.205), 0px 10px 30px rgba(197, 164, 250, 0.486);
 }
 /*search button*/
 .search-button {

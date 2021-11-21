@@ -1,9 +1,10 @@
 import React from 'react';
 import SearchBar from './Searchbar';
-import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
-
-
+import VideoList from './VideoList';
+import { Link } from 'react-router-dom';
+import '../style/videodetail.css';
+import "../style/app.css"
 
 
 const VideoPlayer = ({handleFormSubmit, handleVideoDetails, handleVideoSelect, video, videos, details}) => {
@@ -20,10 +21,11 @@ const VideoPlayer = ({handleFormSubmit, handleVideoDetails, handleVideoSelect, v
                         <br></br>
                     </div>
                 )}
-                <div className="details">
+                <div>
                     {videos.length === 0 ? <div></div> :
-                    <button onClick={ () => handleVideoDetails()} className="details-button">Video details </button>}
-
+                    <Link to="/details" className="details" >
+                        <button onClick={ () => handleVideoDetails()} className="details-button">Video details  </button>
+                    </Link>}
                 </div>
             </div>
             <VideoList handleVideoSelect={handleVideoSelect} videos={videos}/>
