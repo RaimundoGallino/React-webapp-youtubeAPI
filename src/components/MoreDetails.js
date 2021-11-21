@@ -1,23 +1,21 @@
 import React from 'react';
 import VideoList from './VideoList';
-import VideoDetail from './VideoDetail';
-import '../style/videodetail.css';
+import VideoContent from './VideoContent';
+import '../style/videoplayer.css';
+import '../style/moredetails.css';
 import { Link } from 'react-router-dom';
 
-const MoreDetails= ({handleVideoDetails, handleVideoSelect, video, videos, details}) => {
+const MoreDetails= ({handleVideoDetails, handleVideoSelect, handleVideosWached, video, videos, details}) => {
     return (
         <>
-        <div className = "details-not-search"></div>
+        <div className = "details-not-search">
+            <Link to="/videoplayer" className="details">
+            <button onClick={ () => handleVideoDetails()} className="back-button">Back </button>
+            </Link>
+        </div>
         <div className="videos">
             <div className="video-repro">
-                <VideoDetail video={video}  details ={details} />
-                    {videos.length === 0 ? <div></div> :
-                    <div>
-                    <Link to="/videoplayer" className="details">
-                    <button onClick={ () => handleVideoDetails()} className="details-button">Back </button>
-                    </Link>
-                    </div>}
-
+                <VideoContent video={video}  details ={details} handleVideosWached={handleVideosWached}/>
             </div>
             <VideoList handleVideoSelect={handleVideoSelect} videos={videos}/>
         </div>

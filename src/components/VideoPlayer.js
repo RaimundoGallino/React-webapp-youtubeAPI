@@ -1,20 +1,20 @@
 import React from 'react';
 import SearchBar from './Searchbar';
-import VideoDetail from './VideoDetail';
+import VideoContent from './VideoContent';
 import VideoList from './VideoList';
 import { Link } from 'react-router-dom';
-import '../style/videodetail.css';
 import "../style/app.css"
+import "../style/videoplayer.css"
 
 
-const VideoPlayer = ({handleFormSubmit, handleVideoDetails, handleVideoSelect, video, videos, details}) => {
+const VideoPlayer = ({handleFormSubmit, handleVideoDetails, handleVideoSelect, handleVideosWached, video, videos, details, videosWachedCounter}) => {
     return (
         <>
         <SearchBar handleFormSubmit={handleFormSubmit}/>
         <div className="videos">
             <div className="video-repro">
             {video ? (
-                <VideoDetail video={video}  details={details}/>
+                <VideoContent video={video} details={details} handleVideosWached={handleVideosWached}/>
                 ) : (
                     <div>
                         <h1>Search any video...</h1>
@@ -23,8 +23,9 @@ const VideoPlayer = ({handleFormSubmit, handleVideoDetails, handleVideoSelect, v
                 )}
                 <div>
                     {videos.length === 0 ? <div></div> :
-                    <Link to="/details" className="details" >
+                    <Link to="/details" className="extra-content" >
                         <button onClick={ () => handleVideoDetails()} className="details-button">Video details  </button>
+                        <p class="watched">Videos Watched {videosWachedCounter}</p>
                     </Link>}
                 </div>
             </div>

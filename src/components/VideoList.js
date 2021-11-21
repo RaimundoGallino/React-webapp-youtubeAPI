@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoItem from './VideoItem';
+import '../style/videolist.css';
 
 const VideoList = ({videos , handleVideoSelect}) => {
     console.log("estos son los videos que le llegan al video list",videos)

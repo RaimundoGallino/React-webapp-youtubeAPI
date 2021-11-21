@@ -1,0 +1,121 @@
+/*video items*/
+.video-thumbnails {
+    background: #ee9b00;
+    flex: 1;
+    margin: 1em;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+  
+.item {
+    align-items: center;
+    margin: 10px auto 20px auto;
+    height: 28%;
+    max-width: 300px;
+    min-width: 200px;
+    background: #e9d8a6;
+    display: flex;
+    flex-direction: row;
+}
+
+.short-desc {
+    background: #001219;
+    margin: 0.5em;
+    flex: 1;
+    font-size: 0.7em;
+  
+    color: white;
+    height: 90%;
+    max-width: 90px;
+  
+    text-overflow: ellipsis;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.thumbnail {
+    background: #001219;
+    margin: 0.5em;
+    height: 90%;
+    width: 70%;
+    max-width: 80%;
+    flex: 3;
+  }
+
+/*-----------responsive-----------*/
+
+@media only screen and (min-width: 400px) and (max-width: 1400px) {
+    .video-thumbnails {
+        width: 500px;
+        height: 400px;
+      }
+    
+      .item {
+        align-items: center;
+        margin: 10px auto 20px auto;
+        height: 60%;
+        max-width: 500px;
+        min-width: 300px;
+      }
+    
+      .short-desc {
+        font-size: 0.8em;
+        text-overflow: ellipsis;
+        display: inline-block;
+        overflow: hidden;
+      }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    .video-thumbnails {
+        background: #ee9b00;
+        flex: 1;
+        margin: 1em;
+        height: 500px;
+        max-width: 600px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+      
+    .item {
+        align-items: center;
+        margin: 10px auto 20px auto;
+        height: 28%;
+        max-width: 400px;
+        min-width: 200px;
+        background: #e9d8a6;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .short-desc {
+        background: #001219;
+        margin: 0.5em;
+        flex: 1;
+        font-size: 0.7em;
+      
+        color: white;
+        height: 90%;
+        max-width: 90px;
+      
+        text-overflow: ellipsis;
+        display: inline-block;
+        overflow: hidden;
+    }
+    
+    .thumbnail {
+        background: #001219;
+        margin: 0.5em;
+        height: 90%;
+        width: 70%;
+        max-width: 80%;
+        flex: 3;
+      }
+}
+
+
+
+

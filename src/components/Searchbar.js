@@ -12,7 +12,6 @@ export default function SearchBar ({handleFormSubmit}) {
 
     const handleSubmit = event => {
         event.preventDefault();
-
         handleFormSubmit(term);
     }
 

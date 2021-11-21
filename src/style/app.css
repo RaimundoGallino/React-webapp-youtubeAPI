@@ -1,50 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Roboto+Mono&display=swap');
-
 * {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
 }
-
 
 #root {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  margin: 0px 100px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin: 0px 10px;
 }
+
 
 /*parent class - all big contaniers*/
+
 .parent {
-  height: 100vh;
-  width:80%;
-  padding: 0.5em;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-top: 5px;
-
-  align-items: center;
-  justify-content: center;
-  
+    height: 100vh;
+    text-align: center;
+    margin: 0px 150px;
+    background: #001219;
+    height: 100vh;
+    max-width: 100%;
+    min-width: 80%;
 }
+
+
 /*logo container*/
+
 .header {
-
-  height: 15vh;
-  width: 20vh;
-
-  align-items: center;
-  justify-content: center;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    background: #005f73;
 }
 
 .header img {
-  margin: auto;
-  margin-top: 1em;
-  height:'100px';
-  justify-content: center;
-  
+    margin: auto;
+    margin-top: 1em;
+    height: 100px;
+    justify-content: center;
 }
 
 
@@ -75,29 +71,37 @@
 }
 */
 
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
+/*-----------responsive-----------*/
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     #root {
-      display: flex;
-
-      margin: 0px 0px;
+        display: flex;
+        margin: 0px 0px;
     }
     .header img {
-      margin: auto;
-      margin-top: 1em;
+        margin: auto;
+        margin-top: 1em;
     }
-    
+    .parent {
+
+        margin: 0px 0px;
+    }
 }
 
-@media only screen and (min-width: 600px)
-and  (max-width: 1400px) {
+@media only screen and (min-width: 400px) and (max-width: 1400px) {
+    .videos {
+        flex-flow: no-wrap;
+        flex-direction: column;
+    }
+}
 
-  .videos {
-    flex-flow: no-wrap;
-    flex-direction: column;
-  }
+@media only screen and (min-width: 1800px) and (max-width: 2000px) {
+    .parent {
 
+        margin: 0px 1000px;
+    }
+    #root {
+        display: flex;
+        margin: 0px 200px;
+    }
 }

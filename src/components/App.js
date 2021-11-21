@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 import youtube from '../apis/youtube';
 import VideoPlayer from './VideoPlayer';
 import logo from '../assets/youTubeLogoGif.gif';
-import "../style/app.css"
 import MoreDetails from './MoreDetails';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
+import "../style/app.css"
 
 
 export default function App () {
@@ -18,6 +18,8 @@ export default function App () {
     const [relatedVideos, setRelatedVideos] = useState([]);
     const [wachedVideos, setWachedVideos] = useState([]);
     const [videosWachedCounter, setVideosWachedCounter] = useState(0);
+
+
 
 
     const handleSubmit = async (textFromSearchBar) => {
@@ -69,13 +71,13 @@ export default function App () {
     }
 
     const handleVideosWached = () => {
-        let id = selectedVideo.id.videoId
-        if (!(wachedVideos.includes(id))) {
-            setWachedVideos(wachedVideos.push(id))
+        var id = selectedVideo.id.videoId;
+        if ( wachedVideos.includes(id) === false ) {
+            wachedVideos.push(id)
+            setWachedVideos(wachedVideos)
             setVideosWachedCounter(videosWachedCounter + 1)
         }
     }
-
 
     return (
         <Router>
@@ -86,16 +88,20 @@ export default function App () {
                 handleFormSubmit={handleSubmit}
                 handleVideoDetails={handleVideoDetails}
                 handleVideoSelect={handleVideoSelect}
+                handleVideosWached={handleVideosWached}
                 video={selectedVideo}
                 videos={videos}
                 details={details}
+                videosWachedCounter={videosWachedCounter}
             />}/>
             <Route path="/details" element={<MoreDetails 
                 handleVideoDetails={handleVideoDetails}
                 handleVideoSelect={handleVideoSelect}
+                handleVideosWached={handleVideosWached}
                 video={selectedVideo}
                 videos={relatedVideos}
                 details={details}
+                videosWachedCounter={videosWachedCounter}
             />}/>
             </Routes>
         </div>
