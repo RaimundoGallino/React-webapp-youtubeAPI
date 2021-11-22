@@ -1,6 +1,6 @@
 /*video items*/
 .video-thumbnails {
-    background: #ee9b00;
+
     flex: 1;
     margin: 1em;
     height: 500px;
@@ -12,16 +12,30 @@
 .item {
     align-items: center;
     margin: 10px auto 20px auto;
-    height: 28%;
-    max-width: 300px;
-    min-width: 200px;
-    background: #e9d8a6;
+    height: 33%;
+    max-width: 400px;
+    min-width: 300px;
+
     display: flex;
     flex-direction: row;
+
+    animation: calc(0.7s * var(--index)) cubic-bezier(.6,.28,.52,1.06) 0s 1 itemsSlideInFromRight;
+
+}
+
+@keyframes itemsSlideInFromRight {
+    0% {
+      transform: translate(80%, -10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
 }
 
 .short-desc {
-    background: #001219;
+
     margin: 0.5em;
     flex: 1;
     font-size: 0.7em;
@@ -36,7 +50,7 @@
 }
 
 .thumbnail {
-    background: #001219;
+
     margin: 0.5em;
     height: 90%;
     width: 70%;
@@ -70,7 +84,7 @@
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     .video-thumbnails {
-        background: #ee9b00;
+
         flex: 1;
         margin: 1em;
         height: 500px;
@@ -86,13 +100,13 @@
         height: 28%;
         max-width: 400px;
         min-width: 200px;
-        background: #e9d8a6;
+
         display: flex;
         flex-direction: row;
     }
     
     .short-desc {
-        background: #001219;
+
         margin: 0.5em;
         flex: 1;
         font-size: 0.7em;

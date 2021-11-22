@@ -1,10 +1,14 @@
 import React from 'react';
+
 import '../style/videolist.css';
 
-const VideoItem = ({video , handleVideoSelect}) => {
+
+const VideoItem = ({video , handleVideoSelect, indexCounter}) => {
+    console.log("el contador ", indexCounter)
 
     return (
-        <div className='item' onClick={ () => handleVideoSelect(video)}>
+        <div className='item' onClick={ () => handleVideoSelect(video) } style={{'--index': String(indexCounter)}}>
+
             { video.snippet.title ? (
                 <div className='short-desc'>{video.snippet.title}</div>
             ) : (

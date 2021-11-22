@@ -9,7 +9,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
     text-align: center;
-    background: #005f73;
+
     display: flex;
     flex-direction: row;
     flex: 1;
@@ -33,8 +33,25 @@
     -moz-transition: 0.18s ease-out;
     -o-transition: 0.18s ease-out;
     transition: 0.18s ease-out;
+    animation: 1.3s cubic-bezier(.39,.65,.25,1.11) 0s 1 slideInFromLeft;
+
     flex: 2;
 }
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
 
 .search:hover {
     box-shadow: inset 1px 10px 12px rgba(0, 0, 0, 0.02);
@@ -63,12 +80,27 @@
     outline: none;
     font-size: 1.2em;
     background-color: rgb(233, 233, 233);
-    ;
+
     -webkit-transition: .18s ease-out;
     -moz-transition: .18s ease-out;
     -o-transition: .18s ease-out;
     transition: .18s ease-out;
     flex: 1;
+    animation: 1.5s cubic-bezier(.39,.65,.25,1.11) 0s 1 slideInFromRight;
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(140%);
+      opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
 }
 
 .search-button:hover {

@@ -1,5 +1,7 @@
 import React from "react";
+
 import '../style/videocontent.css';
+
 
 const VideoContent = ({ video, details, handleVideosWached}) => {
 

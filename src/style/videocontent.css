@@ -2,7 +2,7 @@
 /*video details content*/
 
 .title {
-    background: #001219;
+
     margin: 0.2em;
     flex: 0.6;
     padding: 5px;
@@ -10,29 +10,31 @@
     color: white;
     font-size: 30px;
     text-align: justify;
+    animation: 4s linear 0s 1 appearSlowly;
 }
 
 .video {
-    background: #731718;
     margin: 0.2em;
     flex: 4;
     height: 80%;
     color: white;
     font-size: 30px;
+
+    animation: 2.5s linear 0s 1 appearSlowly;
 }
+
 iframe {
     /*background: lightblue;*/
-    background: #731718;
 
     flex: 4;
     height: 100%;
     width: 100%;
     color: white;
     font-size: 30px;
+
 }
 
 .description {
-    background: #001219;
     margin: 0.2em;
     flex: 0.6;
     padding: 5px;
@@ -40,6 +42,19 @@ iframe {
     color: white;
     font-size: 0.9em;
     text-align: left;
+    animation: 4s linear 0s 1 appearSlowly;
+}
+
+@keyframes appearSlowly {
+    0% {
+      opacity: 0;
+    }
+    30% {
+        opacity: .8;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
 

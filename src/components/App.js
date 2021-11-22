@@ -19,9 +19,9 @@ export default function App () {
     const [wachedVideos, setWachedVideos] = useState([]);
     const [videosWachedCounter, setVideosWachedCounter] = useState(0);
 
-
-
-
+/* handle submit sended from the input
+    gets the text from the input and make a 
+*/
     const handleSubmit = async (textFromSearchBar) => {
         const response = await youtube.get('/search', {
             params: {
@@ -79,6 +79,7 @@ export default function App () {
         }
     }
 
+
     return (
         <Router>
         <div className='parent'>
@@ -110,6 +111,7 @@ export default function App () {
 }
 
 const Header = () => {
+
     return (
         <div className= "header">
             <img style={{height:'100px',justifyContent:'center'}} src={logo} alt="youtube logo"/>

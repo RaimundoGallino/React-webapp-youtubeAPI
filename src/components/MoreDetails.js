@@ -1,9 +1,11 @@
 import React from 'react';
 import VideoList from './VideoList';
 import VideoContent from './VideoContent';
+import { Link } from 'react-router-dom';
+
 import '../style/videoplayer.css';
 import '../style/moredetails.css';
-import { Link } from 'react-router-dom';
+
 
 const MoreDetails= ({handleVideoDetails, handleVideoSelect, handleVideosWached, video, videos, details}) => {
     return (

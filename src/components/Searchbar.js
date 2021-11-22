@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+
 import '../style/searchbar.css';
 
 
@@ -15,6 +16,22 @@ export default function SearchBar ({handleFormSubmit}) {
         handleFormSubmit(term);
     }
 
+    /*-------Animations-------
+
+    const timeline = gsap.timeline({defaults:{opacity:0, duration:2, ease: Power3.easeInOut}})
+
+    useEffect (() => {
+        const search = document.querySelector('.search');
+        const button = document.querySelector('.search-button');
+
+        timeline
+            .add('start')
+            .from(search, {x: -200}, 'start')
+            .from(button, {x: 200}, 'start')
+    })
+
+    -----------------------*/
+
     return (
         <>
         <form onSubmit={handleSubmit} className='search-bar'>
@@ -23,4 +40,6 @@ export default function SearchBar ({handleFormSubmit}) {
         </form>
         </>
     )
+
+
 }

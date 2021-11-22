@@ -3,7 +3,7 @@
 
 /*video player parent container*/
 .videos {
-    background: #0a9396;
+
     margin: auto;
     display: flex;
     width: 100%;
@@ -19,7 +19,7 @@
 -extra content
 */
 .video-repro {
-    background-color: #e9d8a6;
+
     margin: 1em;
     margin-top: 0px;
     height: 550px;
@@ -31,9 +31,14 @@
 
 /*-----------Shared with MoreDetails-----------*/
 
+h1 {
+    color: white;
+
+    animation: 2s linear 0s 1 appearSlowly;
+}
 
 .extra-content {
-    background: #001219;
+
     margin: 0.2em;
     flex: 0.5;
     height: 80%;
@@ -43,6 +48,22 @@
     font-size: 30px;
     text-decoration: none;
     justify-content: space-around;
+
+    animation: 2.5s linear 0s 1 slideFromBottom;
+}
+
+@keyframes slideFromBottom {
+    0% {
+    transform: translateY(-30%);
+    opacity: 0;
+    }
+    30% {
+        opacity: 0.8;
+    }
+    100% {
+    transform: translateY(0);
+    opacity: 1;
+    }
 }
 
 .watched {
@@ -95,6 +116,8 @@
     border: 2px solid #B8B6B6;
     box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
+
+
 
 /*-----------responsive-----------*/
 
