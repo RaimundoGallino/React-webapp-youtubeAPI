@@ -18,10 +18,13 @@ export default function App () {
     const [relatedVideos, setRelatedVideos] = useState([]);
     const [wachedVideos, setWachedVideos] = useState([]);
     const [videosWachedCounter, setVideosWachedCounter] = useState(0);
+    
 
-/* handle submit sended from the input
-    gets the text from the input and make a 
-*/
+    /* handle submit sended from the input
+        - gets the text from the input 
+        - make a GET request from the api (/search')
+        - uptdates the data for other components to render
+    */
     const handleSubmit = async (textFromSearchBar) => {
         const response = await youtube.get('/search', {
             params: {

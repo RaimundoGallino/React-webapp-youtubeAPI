@@ -1,5 +1,5 @@
 import axios from 'axios';
-const KEY = 'AIzaSyCjqs520IEykQgLHEvpCRX6MePyGEwRt_k';
+const KEY = 'AIzaSyBeiuYgioJvFl3ueEdLfkx_Ad3Oco0SYaM';
 
 
 // New instance of axios for handleing youtube api requests
