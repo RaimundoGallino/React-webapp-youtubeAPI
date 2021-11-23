@@ -25,12 +25,17 @@ The styling for the webapp was made entairly with css as well as the animations
 
 ## How to use it
 
-Clone the repository to a local directory
+Yoy will need to have [node.js](https://nodejs.org/es/download/) installed in order to run this app 
+
+Clone this repository to your local directory
 
 In the project directory, you can run:
+
+### `npm install react`
+(if you don't have react already installed)
 
 ### `npm start`
 
 Runs the app in the development mode.\VideoPlayer
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000/videoplayer](http://localhost:3000/videoplayer) to view it in the browser.
