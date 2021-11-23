@@ -20,6 +20,8 @@
 All components are separete files as well as the styling from the page. 
 The yotube.js file contains the basic data for making requests easier with axios
 
+The app was made using hooks, [here](https://github.com/RaimundoGallino/ReactYoutubeApi-classes) is another repo with the classes based implementation
+
 
 The styling for the webapp was made entairly with css as well as the animations
 
