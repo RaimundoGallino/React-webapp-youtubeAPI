@@ -1,8 +1,10 @@
 # React-webapp-youtubeAPI
 
+
 <div align=center>
-<iframe src="https://giphy.com/embed/SIwZOPn0E9nt9BNAo2" width="540" height="380" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><href="https://giphy.com/gifs/SIwZOPn0E9nt9BNAo2"></p>
+<iframe src="https://giphy.com/embed/SIwZOPn0E9nt9BNAo2" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>
 </div>
+
 
  - Displays the videos from the term typed in the input. 
  - A video player to play the video
