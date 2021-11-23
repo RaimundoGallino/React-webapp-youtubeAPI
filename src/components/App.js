@@ -20,9 +20,9 @@ export default function App () {
     const [videosWachedCounter, setVideosWachedCounter] = useState(0);
     
 
-    /* handle submit sended from the input
+    /* Handles submit sended from the input
         - gets the text from the input 
-        - make a GET request from the api (/search')
+        - make a GET request from the api (/search)
         - uptdates the data for other components to render
     */
     const handleSubmit = async (textFromSearchBar) => {
@@ -37,6 +37,12 @@ export default function App () {
         setRelatedVideos(handleRelatedVideos(response.data.items[0]));
     };
 
+    /* Handles related videos request
+        - gets id of the selected video
+        - make a GET request from the api (relatedToVideoId)
+        - cleans the data obtained from response (some items miss the snippet param)
+        - uptdates the cleaned data for other components to render
+    */
     const handleRelatedVideos = async (selectedVideo) => {
 
         // Requesting related videos
@@ -59,6 +65,11 @@ export default function App () {
         setRelatedVideos(cleanedResponse.slice(0, 3));
     }
 
+    /* Handles the selection of the video
+        - recives the video from the item onClick event
+        - makes a backup for all videos list (including the on that is on the VideoContent)
+        - sets the selected video variable
+    */
     const handleVideoSelect = (video) => {
         let videoList = [...videosBackup];
         let index = videoList.indexOf(video)
@@ -66,13 +77,21 @@ export default function App () {
         setSelectedVideo(video);
         setVideos(videoList);
         handleRelatedVideos(video);
-        console.log("VIDEO BACKUP LIST", videosBackup)
     }
 
+    /* Handles the details boolean
+        - method called with video details button
+        - the value is updated with the oposite
+    */
     const handleVideoDetails = () => {
         setDetails(!details);
     }
 
+    /* Handles the amount of videos wached by the user
+        - gets the selected video id
+        - checks if the same video id exists on the array of videos wached
+        - appends it if there is not
+    */
     const handleVideosWached = () => {
         var id = selectedVideo.id.videoId;
         if ( wachedVideos.includes(id) === false ) {
@@ -117,7 +136,7 @@ const Header = () => {
 
     return (
         <div className= "header">
-            <img style={{height:'100px',justifyContent:'center'}} src={logo} alt="youtube logo"/>
+            <img src={logo} alt="youtube logo"/>
         </div>
     )
 }

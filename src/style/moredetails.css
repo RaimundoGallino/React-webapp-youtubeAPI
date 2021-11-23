@@ -59,6 +59,8 @@
     box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
+/*-----------responsive-----------*/
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     .back-button {  
         height: 40px;

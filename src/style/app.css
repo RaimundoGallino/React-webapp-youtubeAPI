@@ -42,32 +42,6 @@
 }
 
 
-/*responsive
-
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    
-    .videos {
-      flex-flow: no-wrap;
-      flex-direction: column;
-    }
-
-    .header img {
-      margin: auto;
-      margin-top: 1em;
-    }
-    /*
-    .video-repro {
-      order:1;
-    }
-    .video-thumbnails {
-      order:2;
-    }
-
-}
-*/
 
 /*-----------responsive-----------*/
 

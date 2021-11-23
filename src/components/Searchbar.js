@@ -7,30 +7,21 @@ export default function SearchBar ({handleFormSubmit}) {
 
     const [term, setTerm] = useState("");
 
+    /* Handle the input submited
+        - updates the term of the input   
+    */
     const handleChange = (event) => {
         setTerm(event.target.value)
     }
 
+    /* Handle the input submited
+        - prevent the browser from executing the default action of the selected element.
+        - calls the function in the app component
+    */
     const handleSubmit = event => {
         event.preventDefault();
         handleFormSubmit(term);
     }
-
-    /*-------Animations-------
-
-    const timeline = gsap.timeline({defaults:{opacity:0, duration:2, ease: Power3.easeInOut}})
-
-    useEffect (() => {
-        const search = document.querySelector('.search');
-        const button = document.querySelector('.search-button');
-
-        timeline
-            .add('start')
-            .from(search, {x: -200}, 'start')
-            .from(button, {x: 200}, 'start')
-    })
-
-    -----------------------*/
 
     return (
         <>

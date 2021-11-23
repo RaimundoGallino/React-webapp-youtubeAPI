@@ -1,4 +1,3 @@
-
 /*video details content*/
 
 .title {
@@ -24,14 +23,12 @@
 }
 
 iframe {
-    /*background: lightblue;*/
 
     flex: 4;
     height: 100%;
     width: 100%;
     color: white;
     font-size: 30px;
-
 }
 
 .description {
@@ -44,6 +41,9 @@ iframe {
     text-align: left;
     animation: 4s linear 0s 1 appearSlowly;
 }
+
+
+/*-----------Animation-----------*/
 
 @keyframes appearSlowly {
     0% {
@@ -59,7 +59,7 @@ iframe {
 
 
 
-/*-----------responsive-----------*/
+/*-----------Responsive-----------*/
 
 @media only screen and (min-width: 400px) and (max-width: 1400px) {
     iframe {
@@ -68,8 +68,7 @@ iframe {
         flex: 1;
     }
     .video {
-        /*background: lightblue;*/
-        /*margin: .2em;*/
+
         flex: 6;
         height: 80%;
 

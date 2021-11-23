@@ -12,12 +12,7 @@
     align-items: center;
 }
 
-/* video details parent container 
--title
--description
--iframe
--extra content
-*/
+/* video details parent container */
 .video-repro {
 
     margin: 1em;
@@ -52,30 +47,16 @@ h1 {
     animation: 1s linear 0s 1 slideFromBottom;
 }
 
-@keyframes slideFromBottom {
-    0% {
-    transform: translateY(30%);
-    opacity: 0;
-    }
-    30% {
-        opacity: 0.8;
-    }
-    100% {
-    transform: translateY(0);
-    opacity: 1;
-    }
-}
-
 .watched {
     flex: 3;
     font-size: .7em;
     margin: 1em;
     height: 50%;
     text-align: center;
-  
+    
     min-width: 30%;
     max-width: 40%;
-
+    
 }
 
 /*video details*/
@@ -83,7 +64,7 @@ h1 {
 .details-button {
     margin: 1em;
     height: 50%;
-  
+    
     min-width: 20%;
     max-width: 30%;
     align-self: center;
@@ -94,13 +75,13 @@ h1 {
     outline: none;
     font-size: 1em;
     background-color: rgb(233, 233, 233);
-  
+    
     -webkit-transition: 0.18s ease-out;
     -moz-transition: 0.18s ease-out;
     -o-transition: 0.18s ease-out;
     transition: 0.18s ease-out;
     font-size: 25px;
-  
+    
     flex: .5;
 }
 
@@ -118,29 +99,44 @@ h1 {
 }
 
 
+/*-----------Animation-----------*/
 
-/*-----------responsive-----------*/
+@keyframes slideFromBottom {
+    0% {
+    transform: translateY(30%);
+    opacity: 0;
+    }
+    30% {
+        opacity: 0.8;
+    }
+    100% {
+    transform: translateY(0);
+    opacity: 1;
+    }
+}
+
+/*-----------Responsive-----------*/
 
 @media only screen and (min-width: 400px) and (max-width: 1400px) {
-
+    
     .video-repro {
         height: 90%;
     }
-  
+    
     .video-repro {
         height: 100px;
     }
-  
+    
     .videos {
         flex-flow: no-wrap;
         flex-direction: column;
         height: 1100px;
     }
-
+    
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-
+    
     .videos {
         flex-flow: no-wrap;
         flex-direction: column;
